@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "649331955657",
+    "project_id": "modernshop-468aa",
+    "storage_bucket": "modernshop-468aa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649331955657:android:247fcf63db9901698dba18",
+        "android_client_info": {
+          "package_name": "com.example.modernshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-1U-UfxDTotyZoikxl2hb7DOIjtCFXak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
