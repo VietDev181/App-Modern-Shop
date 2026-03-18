@@ -1,0 +1,44 @@
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Local config (máy bạn thôi, không push)
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+
+# Keystore (rất quan trọng, không được leak)
+*.jks
+*.keystore
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Captures (ảnh test)
+captures/
+
+# NDK / CMake
+.externalNativeBuild/
+.cxx/
+
+# Generated files
+/bin/
+/out/
+
+# Firebase / Google Services (tuỳ bạn, thường giữ lại file json)
+# google-services.json
+
+# Kotlin
+*.class
+
+# Misc
+*.tmp
+*.bak
+*.swp
