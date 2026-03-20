@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.modernshop.domain.BannerModel
 import com.example.modernshop.domain.CategoryModel
+import com.example.modernshop.domain.ItemsModel
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -47,6 +48,30 @@ class MainRepository {
                 for (child in snapshot.children)
                 {
                     val item = child.getValue(CategoryModel::class.java)
+                    item?.let{list.add(it)}
+                }
+                liveData.value = list
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+        })
+        return liveData
+    }
+
+    fun loadPopular() : LiveData<MutableList<ItemsModel>>
+    {
+        val liveData = MutableLiveData<MutableList<ItemsModel>>()
+        val ref = firebaseDatabase.getReference("Popular")
+        ref.addValueEventListener(object : ValueEventListener
+        {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val list = mutableListOf<ItemsModel>()
+                for (child in snapshot.children)
+                {
+                    val item = child.getValue(ItemsModel::class.java)
                     item?.let{list.add(it)}
                 }
                 liveData.value = list
