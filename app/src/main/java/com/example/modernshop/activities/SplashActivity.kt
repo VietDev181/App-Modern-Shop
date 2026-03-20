@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.modernshop.MainActivity
+import com.example.modernshop.activities.MainActivity
 import com.example.modernshop.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
